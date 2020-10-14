@@ -6,4 +6,9 @@
       <class name="maven_test.maven_demo"/>
     </classes>
   </test> <!-- Test -->
+    <groups>
+  	<run>
+  		<include name="1"/>
+  	</run>
+  </groups>
 </suite> <!-- Suite -->

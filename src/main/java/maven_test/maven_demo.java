@@ -20,31 +20,35 @@ public class maven_demo {
 		
 	}
 
-	@Test
+	@Test(groups={"1"})
 	public void TC_01_ValidateCurrentUrl() {
 		// Login Page Url 
+		System.out.println("Test 1 is running");
 		driver.get("http://www.google.com/");
 		driver.findElement(By.id("fsettl")).click();
 		driver.findElement(By.xpath("//*[@id='fsett']/a[2]")).click();
 	}
 
-	@Test
+	@Test(groups={"1"})
 	public void TC_02_Input_Value() {
 		// Sendkey Covid-19
+		System.out.println("Test 2 is running");
 		driver.findElement(By.name("as_q")).sendKeys("Covid-19");
 		driver.findElement(By.id(":1b")).click();
 		driver.findElement(By.xpath("//*[@id=':19']/div")).click();
 	}
 
-	@Test
-	public void TC_03_LoginFormDisplayed() {
-		// Click login
+	@Test(groups={"1"})
+	public void TC_03_Displayed_Result() {
+		// Show results
+		System.out.println("Test 3 is running");
 		driver.findElement(By.xpath("//*[@id='s1zaZb']/div[5]/div[9]/div[2]/input[2]")).click();
 	}
 	
-	@Test
+	@Test(groups={"2"})
 	public void TC_04_Click_News() {
 		// Click 1st news
+		System.out.println("Test 4 is running");
 		driver.findElement(By.partialLinkText("COVID-19")).click();
 	}
 	

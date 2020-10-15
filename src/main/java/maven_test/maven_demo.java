@@ -3,7 +3,7 @@ package maven_test;
 import org.testng.annotations.Test;
 
 public class maven_demo extends Config {
-	public static String Input = "Covid-19";
+	public static String Input = "Covid19";
 	public static String Language = "lang_vi";
 	public static String Time = "d";
 	public static String SettingBtn = "//*[@id='fsettl']";
@@ -41,13 +41,6 @@ public class maven_demo extends Config {
 		// Show results
 		System.out.println("Test 3 is running");
 		Action.clickElement(SearchBtn);
-	}
-	
-	@Test
-	public void TC_04_Click_News() {
-		// Click 1st news
-		System.out.println("Test 4 is running");
-		Action.clickElement(Input);
 	}
 	
 

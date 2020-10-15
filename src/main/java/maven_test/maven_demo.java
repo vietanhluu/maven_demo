@@ -1,60 +1,54 @@
 package maven_test;
 
-import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class maven_demo {
-	WebDriver driver;
+public class maven_demo extends Config {
+	public static String Input = "Covid-19";
+	public static String Language = "lang_vi";
+	public static String Time = "d";
+	public static String SettingBtn = "//*[@id='fsettl']";
+	public static String AdvSearchBtn = "//*[@id='fsett']/a[2]";
+	public static String SearchField = "//*[@name='as_q']";
+	public static String LanguageField = "//*[@id=':1b']";
+	public static String LanguageSetting = "//*[@class='goog-menuitem' and @value= '" + Language + "']";
+	public static String TimeField = "//*[@id=':84']";
+	public static String TimeSetting = "//*[@class='goog-menuitem' and @value= '" + Time + "']";
+	public static String SearchBtn = "//*[@id='s1zaZb']/div[5]/div[9]/div[2]/input[2]";
 
-	@BeforeClass
-	public void beforeClass() {
-		System.setProperty("webdriver.chrome.driver","C:\\Software Testing\\01 - Software\\webdriver\\chromedriver_win32\\chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
-		
-	}
-
-	@Test(groups={"1"})
-	public void TC_01_ValidateCurrentUrl() {
+	
+	@Test
+	public void TC_01_LoginAdvanceSearch() {
 		// Login Page Url 
 		System.out.println("Test 1 is running");
-		driver.get("http://www.google.com/");
-		driver.findElement(By.id("fsettl")).click();
-		driver.findElement(By.xpath("//*[@id='fsett']/a[2]")).click();
+		Action.clickElement(SettingBtn);
+		Action.clickElement(AdvSearchBtn);
 	}
 
-	@Test(groups={"1"})
-	public void TC_02_Input_Value() {
-		// Sendkey Covid-19
+	@Test
+	public void TC_02_Search_Setting() {
+		// Setting search
 		System.out.println("Test 2 is running");
-		driver.findElement(By.name("as_q")).sendKeys("Covid-19");
-		driver.findElement(By.id(":1b")).click();
-		driver.findElement(By.xpath("//*[@id=':19']/div")).click();
+		Action.clickElement(SearchField);
+		Action.typeText(SearchField, Input);
+		Action.clickElement(LanguageField);
+		Action.clickElement(LanguageSetting);
+		Action.clickElement(TimeField);
+		Action.clickElement(TimeSetting);
 	}
 
-	@Test(groups={"1"})
-	public void TC_03_Displayed_Result() {
+	@Test
+	public void TC_03_Click_SearchBtn() {
 		// Show results
 		System.out.println("Test 3 is running");
-		driver.findElement(By.xpath("//*[@id='s1zaZb']/div[5]/div[9]/div[2]/input[2]")).click();
+		Action.clickElement(SearchBtn);
 	}
 	
-	@Test(groups={"2"})
+	@Test
 	public void TC_04_Click_News() {
 		// Click 1st news
 		System.out.println("Test 4 is running");
-		driver.findElement(By.partialLinkText("COVID-19")).click();
+		Action.clickElement(Input);
 	}
 	
-	@AfterClass
-	public void afterClass() {
-		driver.quit();
-	}
 
 }

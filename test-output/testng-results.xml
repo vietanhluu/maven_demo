@@ -2,47 +2,66 @@
 <testng-results skipped="0" failed="1" total="4" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="13562" started-at="2020-10-13T08:37:15Z" finished-at="2020-10-13T08:37:29Z">
+  <suite name="Default suite" duration-ms="18375" started-at="2020-10-15T08:05:58Z" finished-at="2020-10-15T08:06:16Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="13562" started-at="2020-10-13T08:37:15Z" finished-at="2020-10-13T08:37:29Z">
+    <test name="Default test" duration-ms="18375" started-at="2020-10-15T08:05:58Z" finished-at="2020-10-15T08:06:16Z">
       <class name="maven_test.maven_demo">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:maven_test.maven_demo@68be2bc2]" name="beforeClass" is-config="true" duration-ms="6899" started-at="2020-10-13T15:37:15Z" finished-at="2020-10-13T15:37:22Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:maven_test.maven_demo@675d3402]" name="beforeClass" is-config="true" duration-ms="5716" started-at="2020-10-15T15:05:58Z" finished-at="2020-10-15T15:06:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="TC_01_ValidateCurrentUrl()[pri:0, instance:maven_test.maven_demo@68be2bc2]" name="TC_01_ValidateCurrentUrl" duration-ms="2061" started-at="2020-10-13T15:37:22Z" finished-at="2020-10-13T15:37:24Z">
+        <test-method status="PASS" signature="TC_01_LoginAdvanceSearch()[pri:0, instance:maven_test.maven_demo@675d3402]" name="TC_01_LoginAdvanceSearch" duration-ms="478" started-at="2020-10-15T15:06:04Z" finished-at="2020-10-15T15:06:04Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_01_ValidateCurrentUrl -->
-        <test-method status="PASS" signature="TC_02_Input_Value()[pri:0, instance:maven_test.maven_demo@68be2bc2]" name="TC_02_Input_Value" duration-ms="262" started-at="2020-10-13T15:37:24Z" finished-at="2020-10-13T15:37:24Z">
+        </test-method> <!-- TC_01_LoginAdvanceSearch -->
+        <test-method status="PASS" signature="TC_02_Search_Setting()[pri:0, instance:maven_test.maven_demo@675d3402]" name="TC_02_Search_Setting" duration-ms="468" started-at="2020-10-15T15:06:04Z" finished-at="2020-10-15T15:06:05Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_02_Input_Value -->
-        <test-method status="PASS" signature="TC_03_LoginFormDisplayed()[pri:0, instance:maven_test.maven_demo@68be2bc2]" name="TC_03_LoginFormDisplayed" duration-ms="1611" started-at="2020-10-13T15:37:24Z" finished-at="2020-10-13T15:37:26Z">
+        </test-method> <!-- TC_02_Search_Setting -->
+        <test-method status="PASS" signature="TC_03_Click_SearchBtn()[pri:0, instance:maven_test.maven_demo@675d3402]" name="TC_03_Click_SearchBtn" duration-ms="876" started-at="2020-10-15T15:06:05Z" finished-at="2020-10-15T15:06:05Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_03_LoginFormDisplayed -->
-        <test-method status="FAIL" signature="TC_04_Click_News()[pri:0, instance:maven_test.maven_demo@68be2bc2]" name="TC_04_Click_News" duration-ms="1909" started-at="2020-10-13T15:37:26Z" finished-at="2020-10-13T15:37:28Z">
+        </test-method> <!-- TC_03_Click_SearchBtn -->
+        <test-method status="FAIL" signature="TC_04_Click_News()[pri:0, instance:maven_test.maven_demo@675d3402]" name="TC_04_Click_News" duration-ms="10058" started-at="2020-10-15T15:06:05Z" finished-at="2020-10-15T15:06:16Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Cannot locate an element using partial link text=COVID-19
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"Covid-19"}
+  (Session info: chrome=86.0.4240.75)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
 System info: host: 'WS094', ip: '10.225.3.14', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
-Driver info: driver.version: RemoteWebDriver]]>
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.75, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\lvanh\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56079}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: ee1d733527139f9dda27dd2134cc8e71
+*** Element info: {Using=xpath, value=Covid-19}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate an element using partial link text=COVID-19
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"Covid-19"}
+  (Session info: chrome=86.0.4240.75)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
 System info: host: 'WS094', ip: '10.225.3.14', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_261'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByPartialLinkText(RemoteWebDriver.java:388)
-	at org.openqa.selenium.By$ByPartialLinkText.findElement(By.java:250)
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.75, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\lvanh\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56079}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: ee1d733527139f9dda27dd2134cc8e71
+*** Element info: {Using=xpath, value=Covid-19}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at maven_test.maven_demo.TC_04_Click_News(maven_demo.java:48)
+	at maven_test.Action.clickElement(Action.java:39)
+	at maven_test.maven_demo.TC_04_Click_News(maven_demo.java:50)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -73,7 +92,7 @@ Driver info: driver.version: RemoteWebDriver
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_04_Click_News -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:maven_test.maven_demo@68be2bc2]" name="afterClass" is-config="true" duration-ms="786" started-at="2020-10-13T15:37:28Z" finished-at="2020-10-13T15:37:29Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:maven_test.maven_demo@675d3402]" name="afterClass" is-config="true" duration-ms="755" started-at="2020-10-15T15:06:16Z" finished-at="2020-10-15T15:06:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
